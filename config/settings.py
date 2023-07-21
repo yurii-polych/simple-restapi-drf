@@ -41,6 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # own apps
+    'insurance.apps.InsuranceConfig',
+
+    # third-party apps
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
