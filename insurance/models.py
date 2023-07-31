@@ -11,6 +11,9 @@ class Insurance(models.Model):
     class Meta:
         db_table = 'insurance'
 
+    def __str__(self):
+        return f'{self.pk}. type: {self.type}, name: {self.name}, price: {self.price}'
+
 
 class Client(models.Model):
     first_name = models.CharField(max_length=50, null=False)
