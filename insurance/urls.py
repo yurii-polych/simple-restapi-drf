@@ -6,7 +6,7 @@ from insurance.views import ClientViewSet, InsuranceViewSet
 urlpatterns = []
 
 router = SimpleRouter()
-router.register('client', ClientViewSet)
-router.register('insurance', InsuranceViewSet)
+router.register('clients', ClientViewSet)
+router.register('insurances', InsuranceViewSet)
 
 urlpatterns += router.urls
