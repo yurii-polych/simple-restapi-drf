@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('insurance.urls'))
+    path('', include('insurance.urls')),
+    path('api-auth/', include('rest_framework.urls')),  # add login and logout views
 ]
