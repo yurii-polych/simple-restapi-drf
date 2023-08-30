@@ -31,7 +31,8 @@ class Logs(models.Model):
     lest_name = models.CharField(max_length=100, null=False)
     age = models.PositiveSmallIntegerField(null=False)
     bank_id = models.BigIntegerField(null=False)
-    insurance = models.ForeignKey(Insurance, on_delete=models.CASCADE, null=False)
+    insurance = models.ForeignKey(Insurance, on_delete=models.DO_NOTHING, null=False)
+    client_id = models.ForeignKey(Client, on_delete=models.DO_NOTHING, null=False, default=0)
     action = models.CharField(max_length=10, null=False)
 
     class Meta:
