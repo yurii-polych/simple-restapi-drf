@@ -34,6 +34,7 @@ class Logs(models.Model):
     insurance = models.ForeignKey(Insurance, on_delete=models.DO_NOTHING, null=False)
     client_id = models.ForeignKey(Client, on_delete=models.DO_NOTHING, null=False, default=0)
     action = models.CharField(max_length=10, null=False)
+    date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         db_table = 'logs'
