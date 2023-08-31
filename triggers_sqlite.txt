@@ -1,0 +1,17 @@
+-- CREATE TRIGGER client_logs_on_create
+-- AFTER INSERT ON client FOR EACH ROW
+-- BEGIN
+--     INSERT INTO logs (first_name, last_name, age, bank_id, action, date, client_id, insurance_id)
+--     VALUES (new.first_name, new.last_name, new.age, new.bank_id, 'create', datetime(), new.id, new.insurance_id);
+-- END;
+
+-- DROP TRIGGER client_logs_on_create;
+
+-- CREATE TRIGGER client_logs_on_update
+-- AFTER UPDATE ON client FOR EACH ROW
+-- BEGIN
+--     INSERT INTO logs (first_name, last_name, age, bank_id, action, date, insurance_id, client_id)
+--     VALUES (new.first_name, new.last_name, new.age, new.bank_id, 'update', datetime(), new.id, new.insurance_id);
+-- END;
+
+-- DROP TRIGGER client_logs_on_update;
