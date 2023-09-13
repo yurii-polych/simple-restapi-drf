@@ -5,6 +5,9 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
     has_permission = models.BooleanField(default=False)
 
+    class Meta:
+        db_table = 'user'
+
 
 class Insurance(models.Model):
     type = models.CharField(max_length=30, null=False)
