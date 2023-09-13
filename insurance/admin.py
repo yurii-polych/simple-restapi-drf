@@ -1,12 +1,11 @@
 from django.contrib import admin
 from insurance.models import Insurance, Client, User
-from django.contrib.auth.admin import UserAdmin
+
 
 # Register your models here.
-# admin.site.register(Insurance)
-# admin.site.register(Client)
-
-admin.site.register(User, UserAdmin)
+@admin.register(User)
+class UserAdmin(admin.ModelAdmin):
+    list_display = ['id', 'username', 'first_name', 'last_name', 'is_superuser', 'has_permission', ]
 
 
 @admin.register(Insurance)
